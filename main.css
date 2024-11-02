@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manjari:wght@100;400;700&display=swap');
+@font-face {
+    font-family: 'mali';
+    src: url('fonts/mali.otf');
+}
+
+* {
+    padding: 0;    
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+nav {
+    display: flex;
+    padding: 1rem;
+    background: #ff4040;
+    z-index: 1;
+}
+
+.nav__links {
+    width: 30%;
+    display: flex;
+}
+
+.nav__title {
+    flex: 1;
+}
+
+.nav__title p {
+    font-size: 0.6rem;
+    color: white;
+    font-weight: 200;
+}
+
+.nav__title p span {
+    font-weight: 700;
+}
+
+.nav__title p:hover span:first-child {
+    color: yellow;
+}
+
+header {
+    min-height: 100vh;
+    position: relative;
+    padding: 0rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+    background: #ff4040;
+}
+
+.header__text {
+    rotate: -4.5deg;
+    transition: all ease 0.3s;
+}
+
+.header__text:hover {
+    rotate: 0deg;
+}
+
+.header__text h1 {
+    background: black;
+    display: inline;
+    padding-inline: 0.2rem;
+    height: 20%;
+    font-size: 4.5rem;
+    color: white;
+}
+
+.header__text h1 span{
+    color: #ffffff44;
+}
+
+.header__text p {
+    color: #ffffff44;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.header__text p span {
+    font-weight: 700;
+}
+
+.header__banner {
+    position: absolute;
+    top: 9%;
+    right: 5%;
+    height: 30vw;
+    width: 30vw;
+    background: white;
+    border: 1px solid #333;
+    transition: all ease 0.3s;
+}
+
+.header__banner:hover {
+    scale: 1.1;
+}
+
+.header__banner img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.rivals {
+    background: white;
+    padding: 2rem;
+}
+
+.rival__row {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+.rival {
+    width: 23%;
+    border: 0.5px solid #00000044;
+    opacity: 0.6;
+    transition: all ease 0.3s;
+    background: white;
+}
+
+.rival--special {
+    background: #ff4040;
+    opacity: 1;
+    display: flex;
+    position: relative;
+    transition: all ease 0.3s;
+}
+
+.rival--special:hover {
+    scale: 1.1;
+    background: #ff3030;
+}
+
+.rival--special h1 {
+    margin: auto;
+    padding: 0.15rem 0.5rem;
+    color: white;
+}
+
+.rival--special p {
+    position: absolute;
+    bottom: 2.5%;
+    left: 7.5%;
+    font-weight: 700;
+    color: white;
+}
+.rival:nth-child(2) {
+    rotate: -4.5deg;
+    translate: -0.5rem -1rem;
+}
+
+.rival:nth-child(3) {
+    rotate: 4.5deg;
+}
+
+.rival__row:nth-child(3n) .rival:nth-child(1) {
+    rotate: 0deg;
+}
+.rival__row:nth-child(3n) .rival:nth-child(2) {
+    rotate: 0deg;
+    translate: 0 0;
+}
+
+.rival__row:nth-child(3n) .rival:nth-child(3) {
+    rotate: 0deg;
+}
+
+.rival__row:nth-child(3n) .rival:nth-child(4) {
+    rotate: 0deg;
+}
+.rival:hover {
+    opacity: 1;
+    z-index: 99;
+}
+
+.rival__text p {
+    font-size: 0.5rem;
+}
+
+.rival__text p span {
+    font-weight: 600;
+}
+
+.rival__text h1 {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.rival__text p.rival__relation {
+    color: #00000044;
+    font-weight: 600;
+}
+
+.rival__text p.rival__feature {
+    font-weight: 100;
+    color: #000000ff;
+}
+
+.rival__text p.rival__feature span {
+    font-weight: 700;
+}
+
+.rival__text {
+    text-transform: uppercase;
+    padding-inline: 0.7rem;
+}
+
+.rival__banner {
+    padding: 0.7rem;
+    padding-bottom: 0;
+}
+
+.rival__banner img {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
