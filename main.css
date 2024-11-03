@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 28px;
+    /* accidentally zoomed in 150% */
+}
+
 body {
     font-family: 'Inter';
 }
