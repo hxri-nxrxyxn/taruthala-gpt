@@ -228,6 +228,71 @@ header {
     object-fit: cover;
 }
 
+section.stats {
+    padding: 2rem;
+}
+
+.stats__back {
+    display: inline;
+    border-radius: 20%;
+    padding: 0.15rem 0.25rem;
+    color: #ff4040;
+    font-weight: 800;
+    border: 1px solid #00000044;
+}
+
+.stats__block {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats__form {
+    width: 40%;
+} 
+
+.stats__form h1 {
+    background: black;
+    color: white;
+    font-size: 0.8rem;
+    display: inline-block;
+    rotate: -4.5deg;
+    translate: 0.1rem 0.5rem;
+}
+
+.stats__form input {
+    border: 1px solid #00000044;
+    width: 40vw;
+    height: 30vh;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.stats__form button {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background: #ff4040;
+    border: 0;
+    color: white;
+    font-weight: 700;
+}
+
+.stats__form h1 span {
+    color: #ff4040;
+}
+
+.stats__reply {
+    width: 40%;
+    display: flex;
+}
+
+.stats__reply h1 {
+    color: #ff4040;    
+    margin: auto;
+}
+
 @media screen and (max-width: 600px) {
     html {
         font-size: 32px;

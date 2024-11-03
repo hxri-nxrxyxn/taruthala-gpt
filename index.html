@@ -37,7 +37,19 @@
 		<div class="rival__row">
 			<div class="rival">
 				<div class="rival__banner">
-					<img src="images/hero.jpg" alt="banner" class="rival-img">
+					<img src="images/moh.png" alt="banner" class="rival-img">
+				</div>
+				<div class="rival__text">
+					<h1 class="rival-name">psycho shammi</h1>
+					<p class="rival__relation">l\\</p>
+					<p class="rival__feature rival-likes"><span>likes </span>cooking</p>
+					<p class="rival__feature rival-hates"><span>hates </span>singing</p>
+					<br>
+				</div>
+			</div>	
+			<div class="rival">
+				<div class="rival__banner">
+					<img src="images/shammi.png" alt="banner" class="rival-img">
 				</div>
 				<div class="rival__text">
 					<h1 class="rival-name">psycho shammi</h1>
@@ -48,18 +60,7 @@
 			</div>	
 			<div class="rival">
 				<div class="rival__banner">
-					<img src="images/hero.jpg" alt="banner" class="rival-img">
-				</div>
-				<div class="rival__text">
-					<h1 class="rival-name">psycho shammi</h1>
-					<p class="rival__feature rival-likes"><span>likes </span>cooking</p>
-					<p class="rival__feature rival-hates"><span>hates </span>singing</p>
-					<br>
-				</div>
-			</div>	
-			<div class="rival">
-				<div class="rival__banner">
-					<img src="images/hero.jpg" alt="banner" class="rival-img">
+					<img src="images/dileep.png" alt="banner" class="rival-img">
 				</div>
 				<div class="rival__text">
 					<h1 class="rival-name">psycho shammi</h1>
@@ -77,11 +78,19 @@
 </section>
 
 <section class="stats">
-	<p class="stats__back">BACK</p>
-	<div class="stats_info">
-		
+	<p class="stats__back"><-</p>
+	<div class="stats__block">
+		<div class="stats__form">
+			<h1>ENTADA MAKKALE <span>PRASNAM</span></h1>	
+			<input id="stats-text" type="text">
+			<button id="stats-submit">TOTTUPOOVARUTH</button>
+		</div>
+		<div class="stats__reply">
+			<h1 id="stats-reply">REPLY</h1>	
+		</div>		
 	</div>
 </section>
+
 <script type="importmap">
 	{
 		"imports": {
@@ -91,14 +100,22 @@
 </script>
 
 <script type="module">
-	// AI
-	import { GoogleGenerativeAI } from "@google/generative-ai";
-	const API_KEY = "AIzaSyArsP6Q5j6YSk62Q-1PGf7h9XRoL9K4boE";
-	const genAI = new GoogleGenerativeAI(API_KEY);
-	const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-	const prompt = "hi";
-	const result = await model.generateContent(prompt);
-	console.log(result.response.text());
+		import { GoogleGenerativeAI } from "@google/generative-ai"; const API_KEY = "AIzaSyArsP6Q5j6YSk62Q-1PGf7h9XRoL9K4boE";
+		const genAI = new GoogleGenerativeAI(API_KEY);
+		const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+document.getElementById("stats-submit").addEventListener("click", async () => {
+  let question = document.getElementById("stats-text").value;
+  const prompt = `my friend made fun of me using the insult ${question}, and i want you to give me a playful insult response, and only - just give me the reply - don't add anything else`;
+
+  try {
+    const result = await model.generateContent(prompt);
+    document.getElementById("stats-reply").textContent = result.response.text();
+    console.log(result.response.text());
+  } catch (error) {
+  }
+  document.getElementById("stats-submit").value = "TODALLENALLE PARANJE!"
+});
 
 	// Firebase
 	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
