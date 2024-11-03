@@ -40,8 +40,7 @@
 					<img src="images/hero.jpg" alt="banner" class="rival-img">
 				</div>
 				<div class="rival__text">
-					<h1>psycho shammi</h1>
-					<p class="rival__relation">friend</p>
+					<h1 class="rival-name">psycho shammi</h1>
 					<p class="rival__feature rival-likes"><span>likes </span>cooking</p>
 					<p class="rival__feature rival-hates"><span>hates </span>singing</p>
 					<br>
@@ -52,8 +51,7 @@
 					<img src="images/hero.jpg" alt="banner" class="rival-img">
 				</div>
 				<div class="rival__text">
-					<h1>psycho shammi</h1>
-					<p class="rival__relation">friend</p>
+					<h1 class="rival-name">psycho shammi</h1>
 					<p class="rival__feature rival-likes"><span>likes </span>cooking</p>
 					<p class="rival__feature rival-hates"><span>hates </span>singing</p>
 					<br>
@@ -64,8 +62,7 @@
 					<img src="images/hero.jpg" alt="banner" class="rival-img">
 				</div>
 				<div class="rival__text">
-					<h1>psycho shammi</h1>
-					<p class="rival__relation">friend</p>
+					<h1 class="rival-name">psycho shammi</h1>
 					<p class="rival__feature rival-likes"><span>likes </span>cooking</p>
 					<p class="rival__feature rival-hates"><span>hates </span>singing</p>
 					<br>
@@ -120,7 +117,14 @@
 	const analytics = getAnalytics(app);
 
 for (let i = 0; i < 3; i++){
-	let dbRef = ref(getDatabase(app), `${i}/likes`);
+	let dbRef = ref(getDatabase(app), `${i}/name`);
+	onValue(dbRef, (snapshot) => {
+		const data = snapshot.val();
+		console.log(data);
+		document.querySelectorAll('.rival-name')[i].textContent = data;
+	});
+
+	dbRef = ref(getDatabase(app), `${i}/likes`);
 	onValue(dbRef, (snapshot) => {
 		const data = snapshot.val();
 		console.log(data);
@@ -140,10 +144,9 @@ for (let i = 0; i < 3; i++){
 			// put something here
 			console.log(i)
 		})
-	} // i dont know why it works
+	}
 </script>
 
-<script type="text/javascript" type="module" defer src="script.js">
-</script>
+<script type="text/javascript" type="module" defer src="script.js"></script>
 </body>
 </html>
