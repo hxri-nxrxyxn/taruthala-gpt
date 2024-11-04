@@ -10,7 +10,7 @@ Team Lead: [Hari Narayan M R] - [Saintgits College of Engineering Kottayam]
 
 Member 2: [Fathima N] - [Saintgits College of Engineering Kottayam]
 
-Member 3: [Name] - [Saintgits College of Engineering Kottayam]
+Member 3: [Sreya Anna Joseph] - [Saintgits College of Engineering Kottayam]
 
 
 Project Description
