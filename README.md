@@ -1,6 +1,5 @@
 [tharuthala GPT] 🎯
 
-
 Basic Details
 
 Team Name: [Laddu]
@@ -12,6 +11,7 @@ Team Lead: [Hari Narayan M R] - [Saintgits College of Engineering Kottayam]
 Member 2: [Fathima N] - [Saintgits College of Engineering Kottayam]
 
 Member 3: [Name] - [Saintgits College of Engineering Kottayam]
+
 
 Project Description
 
@@ -35,7 +35,6 @@ Technologies/Components Used
 For Software:
 
 [HTML,CSS,JavaScript]
-
 [Firebase]
 
 
@@ -44,13 +43,12 @@ For Software:
 
 
 
-Installation
+[Installation]
 
 [commands]
 
-Run
+[Run]
 
-[commands]
 
 Project Documentation
 For Software:
